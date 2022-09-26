@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Weather</title>
+        <link rel="stylesheet" href="main.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" 
+            rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" 
+            crossorigin="anonymous">
+    </head>
+    <body>
+        <header style="text-align: center; font-weight: bold; font-size: 200%;">Đoàn Duy Hoàn - B19DCDT088</header>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid tempo">
+                <a class="navbar-brand" href="#">
+                    Dự báo thời tiết
+                </a>
+                <button class="navbar-toggler" type="button" >
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="row">
+                        <div class="col">
+                            <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+                        </div>
+                        <div class="col">
+                        <div class="row">
+                            <a class="nav-link active" aria-current="page" href="#">Địa điểm</a>
+                        </div>
+                        <div class="row">
+                            <select id="places">
+                                <option>Hà Nội</option>
+                                <option>Hải Phòng</option>
+                                <option>Đà nẵng</option>
+                                <option>TPHCM</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="row">
+                        <a class="nav-link active" aria-current="page" href="#">Thời gian</a>
+                        </div>
+                        <div class="row">
+                            <select id="time">
+                                <option>Hôm nay</option>
+                                <option>Ngày mai</option>
+                                <option>3 ngày tới</option>
+                                <option>7 ngày tới</option>
+                            </select>
+                        </div>
+                        </div>
+                </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container1">
+            <div class="row row1">
+                <div class="col-4 temp">
+                    <p class="text1">Nhiệt độ</p>
+                    <p class="text1">(Nhập khoảng nhiệt độ)</p>
+                    <input type="number" id="inputText1" onchange="addNum2()">
+                    <input type="number" id="inputText2" onchange="addNum1()">
+                </div>
+                <div class="col-4 wet">
+                    <p class="text1">Độ ẩm</p>
+                </div>
+                <div class="col-4 light">
+                    <p class="text1">Ánh sáng</p>
+                </div>
+            </div>
+            <div class="row row2">
+                <div class="col-8 chart1">
+                    <div class="title">Biểu đồ nhiệt độ</div>
+                    <canvas id="canvas"></canvas>        
+                </div>
+                <div class="col-4 button1"></div>
+            </div>
+          </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
